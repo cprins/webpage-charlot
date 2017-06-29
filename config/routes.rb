@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
   get 'audio', to: 'welcome#audio'
+  get 'contacto', to: 'welcome#contacto'
+  
+  # creacion de la ruta contacto (envio de correo)
+  get  'contact_mail', to: 'contactmail#new'
+  post 'contact_mail', to: 'contactmail#send'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
